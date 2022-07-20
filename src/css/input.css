@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --gradient : linear-gradient(270deg, #ec4899, #8b5cf6);
+}
+html, body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+} 
+body::-webkit-scrollbar {
+  display: none;
+}
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* .navbar-fixed {
+  @apply fixed z-[9999] backdrop-blur bg-b/70;
+}
+.navbar-fixed .relative .container .flex a {
+  @apply text-white hover:text-p;
+}
+.navbar-fixed .relative .container .flex .flex .flex a {
+  @apply text-white border-slate-200 hover:text-p;
+} */
+#nav-menu {
+  transition: right 1s;
+}
+#nav-menu.cls {
+  @apply right-0;
+}
+.hamburger-line {
+  @apply w-[30px] h-[1.5px] block bg-white;
+}
+.hamburger-active span {
+  @apply bg-p;
+}
+.hamburger-active > span:nth-child(1) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(2) {
+  
+}
+.hamburger-active > span:nth-child(3) {
+  @apply scale-0;
+}
+.link-wrap {
+  @apply bg-neutral-900/70 backdrop-blur transition duration-300 ease-in-out;
+}
+.link {
+  @apply text-zinc-500 py-5 px-8 font-semibold block transition duration-300 ease-in-out;
+}
+.waviy span {
+    position: relative;
+    display: inline-block;
+    @apply text-neutral-900;
+    text-transform: uppercase;
+    animation: waviy 3s infinite;
+    animation-delay: calc(.1s * var(--i));
+    z-index: 20;
+}
+@keyframes waviy {
+  0%,40%,100% {
+      transform: translateY(0)
+}
+  20% {
+      transform: translateY(-20px)
+  }
+}
+.animateText {
+  background-image: var(--gradient);
+  background-clip:text;
+  color:transparent;
+  background-size: 200%;
+  animation: animate 25s infinite alternate;
+}
+@-webkit-keyframes animate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes animate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes animate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.t-stroke {
+  text-shadow:
+   -1px -1px 0 #d4d4d4,  
+    1px -1px 0 #d4d4d4,
+    -1px 1px 0 #d4d4d4,
+     1px 1px 0 #d4d4d4;
+}
