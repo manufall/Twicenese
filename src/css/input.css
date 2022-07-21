@@ -17,15 +17,6 @@ html, body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-/* .navbar-fixed {
-  @apply fixed z-[9999] backdrop-blur bg-b/70;
-}
-.navbar-fixed .relative .container .flex a {
-  @apply text-white hover:text-p;
-}
-.navbar-fixed .relative .container .flex .flex .flex a {
-  @apply text-white border-slate-200 hover:text-p;
-} */
 #nav-menu {
   transition: right 1s;
 }
@@ -56,18 +47,20 @@ html, body {
 .waviy span {
     position: relative;
     display: inline-block;
-    @apply text-neutral-900;
     text-transform: uppercase;
     animation: waviy 3s infinite;
     animation-delay: calc(.1s * var(--i));
     z-index: 20;
+    @apply text-neutral-900;
 }
 @keyframes waviy {
   0%,40%,100% {
-      transform: translateY(0)
+      transform: translateY(0);
+      @apply text-white
 }
   20% {
-      transform: translateY(-20px)
+      transform: translateY(-20px);
+      @apply text-p;
   }
 }
 .animateText {

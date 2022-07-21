@@ -23,7 +23,6 @@ const hamburger = document.querySelector('#hamburger');
 const nav = document.querySelector('#nav-menu');
 const close = document.querySelector('#close');
 const closearea = document.querySelector('#closeArea')
-// const badan = document.querySelector('#badan');
 
 hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('hamburger-active');
@@ -43,10 +42,3 @@ window.addEventListener('click', function(e) {
 
     }
 });
-
-// if(nav.classList.contains('cls'))
-// {
-//     badan.classList.add('overflow-hidden');
-// } else {
-//     badan.classList.remove('overflow-hidden');
-// }
